@@ -1,0 +1,42 @@
+<html lang="pl">
+	<head>
+		<meta charset="utf-8">
+		<title>Rental</title>
+	</head>
+	<body>
+		<h1>Wypożycz samochód</h1>
+		<form method="post" action="newRent.php">
+			<label for="user_id"></label>
+			<input type="text" id="user_id" name="user_id" placeholder="Client ID">
+			<label for="carID"></label>
+			<input type="text" id="carID" name="carID" placeholder="Car ID">
+            <label for="date_of_start"></label>
+			<input type="DATE" id="date_of_start" name="date_of_start">
+            <label for="date_of_end"></label>
+			<input type="DATE" id="date_of_end" name="date_of_end"><br>
+			<input type="submit" value="Dodaj wypożyczenie">
+		</form>
+		<h2>Wyświetl wypożyczenia</h2>
+		<form method="post" action="showRents.php">
+			<input type="submit" value="Wyświetl listę wypożyczeń">
+		</form>
+		<h3>Wyszukaj wypożyczenie</h3>
+		<form method="post" action="showClientRents.php">
+			<label for="user_id"></label>
+			<input type="text" id="user_id" name="user_id" placeholder="Client ID">
+			<input type="submit" value="Wyszukaj">
+		</form>
+		<form method="post" action="showOneRent.php">
+			<label for="rentID"></label>
+			<input type="text" id="rentID" name="rentID" placeholder="rent ID">
+			<input type="submit" value="Wyszukaj">
+		</form>
+		<h4>Usuń wypożyczenie</h4>
+		<form method="post" action="deleteRent.php">
+			<label for="rentID"></label>
+			<input type="text" id="rentID" name="rentID" placeholder="rent ID">
+			<input type="submit" value="Usuń wypożyczenie">
+		</form>
+		<a href="../index.php" target="_self">Menu</a>
+	</body>
+</html>
